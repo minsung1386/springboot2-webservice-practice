@@ -29,4 +29,9 @@ dependencies {
     implementation('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     annotationProcessor('org.projectlombok:lombok')
+
+    // Spring Data JPA 적용
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
+
 }
