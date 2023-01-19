@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @Getter // 모든 필드의 Getter 생성
 @NoArgsConstructor // 기본 constructor 자동 추가 (public Post(){} 와 동일)
-@Entity // 테이블과 링크될 클래스임을 나타냄
+@Entity // 테이블과 링크될 클래스 (Entity 클래스)임을 나타냄
 public class Posts {
 
     // Id: PK, GeneratedValue: PK 생성 규칙 (IDENTITY: auto increment)
@@ -32,5 +32,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
