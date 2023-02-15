@@ -3,6 +3,7 @@ package org.example.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Getter // 모든 필드의 Getter 생성
 @NoArgsConstructor // 기본 constructor 자동 추가 (public Post(){} 와 동일)
 @Entity // 테이블과 링크될 클래스 (Entity 클래스)임을 나타냄
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     // Id: PK, GeneratedValue: PK 생성 규칙 (IDENTITY: auto increment)
     @Id
